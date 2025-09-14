@@ -1,30 +1,22 @@
 import streamlit as st
 
-st.title("🥤 Trang web đặt đồ uống")
+st.title("📚 Quản lý Thời khóa biểu")
 
-# Tạo form
-with st.form("order_form"):
-    # 3 lựa chọn
-    drink = st.selectbox("Chọn loại đồ uống:", ["Trà sữa", "Cà phê", "Nước ép"])
-    sugar = st.selectbox("Chọn loại đường:", ["Ít đường", "Vừa ngọt", "Nhiều đường"])
-    topping = st.selectbox("Chọn loại thạch:", ["Không thạch", "Thạch trái cây", "Trân châu"])
+# Dữ liệu thời khóa biểu
+timetable = {
+    "Thứ Hai": ["Toán", "Ngữ văn", "Tiếng Anh", "Vật lý"],
+    "Thứ Ba": ["Hóa học", "Sinh học", "Lịch sử", "Địa lý"],
+    "Thứ Tư": ["Toán", "Tin học", "Ngữ văn", "Thể dục"],
+    "Thứ Năm": ["Tiếng Anh", "Vật lý", "Công nghệ", "GDCD"],
+    "Thứ Sáu": ["Toán", "Ngữ văn", "Hóa học", "Lịch sử"],
+    "Thứ Bảy": ["Sinh học", "Địa lý", "Tin học", "Thể dục"],
+    "Chủ Nhật": ["Nghỉ học 🎉"]
+}
 
-    # Checkbox in hóa đơn
-    print_invoice = st.checkbox("In hóa đơn")
+# Selectbox chọn ngày
+day = st.selectbox("Chọn ngày trong tuần:", list(timetable.keys()))
 
-    # Nút Submit
-    submitted = st.form_submit_button("Submit")
-
-# Xử lý kết quả
-if submitted:
-    st.success(f"👉 Bạn đã chọn: {drink}, {sugar}, {topping}")
-
-    # Nếu chọn in hóa đơn thì hiện nút tải xuống
-    if print_invoice:
-        invoice_text = f"HÓA ĐƠN\nĐồ uống: {drink}\nĐường: {sugar}\nThạch: {topping}"
-        st.download_button(
-            label="In hóa đơn",
-            data=invoice_text,
-            file_name="hoa_don.txt",
-            mime="text/plain"
-        )
+# Hiển thị môn học
+st.subheader(f"📅 Thời khóa biểu {day}:")
+for i, subject in enumerate(timetable[day], start=1):
+    st.write(f"{i}. {subject}")
