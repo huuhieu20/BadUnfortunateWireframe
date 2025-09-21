@@ -25,8 +25,8 @@ models = {
         {"id": "DB03", "name": "Gohan", "img": "https://w7.pngwing.com/pngs/302/315/png-transparent-gohan-goku-vegeta-dragon-ball-dragon-ball-cartoon-thumbnail.png"}
     ],
     "Naruto": [
-        {"id": "NA01", "name": "Naruto", "img": "https://w7.pngwing.com/pngs/516/865/png-transparent-naruto-uzumaki-sasuke-uchiha-sakura-haruno-kakashi-hatake-naruto-cartoon-fictional-character-thumbnail.png"},
-        {"id": "NA02", "name": "Sasuke", "img": "https://w7.pngwing.com/pngs/806/774/png-transparent-sasuke-uchiha-naruto-uzumaki-sakura-haruno-kakashi-hatake-sasuke-uchiha-naruto-hand-manga-thumbnail.png"},
+        {"id": "NA01", "name": "Naruto", "img": "https://www.google.com/imgres?q=m%C3%B4%20h%C3%ACnh%20naruto&imgurl=https%3A%2F%2Fdinotoystore.vn%2Fwp-content%2Fuploads%2F2023%2F05%2F350636998_264683536102104_7120706964712928931_n.jpg&imgrefurl=https%3A%2F%2Fdinotoystore.vn%2Fsan-pham%2Fmo-hinh-naruto-hien-nhan-thuat-evil-studio%2F&docid=KzkM625TxjqOuM&tbnid=sA9rtVh5rBAu0M&vet=12ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBsQAA..i&w=790&h=526&hcb=2&ved=2ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBsQAA"},
+        {"id": "NA02", "name": "Sasuke", "img": "https://www.google.com/imgres?q=m%C3%B4%20h%C3%ACnh%20naruto&imgurl=https%3A%2F%2Fsneakerdaily.vn%2Fwp-content%2Fuploads%2F2024%2F03%2FMo-Hinh-Do-Choi-POP-MART-Naruto-Ninkai-Taisen-6941848247599-10.jpg&imgrefurl=https%3A%2F%2Fsneakerdaily.vn%2Fsan-pham%2Fmo-hinh-do-choi-pop-mart-naruto-ninkai-taisen-6941848247599%2F&docid=xiHLiMzoHaDd4M&tbnid=8ht3Y-L_SbAvNM&vet=12ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBwQAA..i&w=1200&h=1200&hcb=2&ved=2ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBwQAA"},
         {"id": "NA03", "name": "Kakashi", "img": "https://w7.pngwing.com/pngs/620/978/png-transparent-kakashi-hatake-naruto-uzumaki-sasuke-uchiha-sakura-haruno-naruto-cartoon-comic-book-fictional-character-thumbnail.png"}
     ],
     "One Piece": [
