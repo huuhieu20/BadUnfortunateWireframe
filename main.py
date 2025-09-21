@@ -20,19 +20,21 @@ option = st.radio("Chủ đề", ["Dragon Ball", "Naruto", "One Piece"])
 # --- Dữ liệu mô hình ---
 models = {
     "Dragon Ball": [
-        {"id": "DB01", "name": "Goku", "img": "https://i.ibb.co/J3h7X7B/goku.png"},
-        {"id": "DB02", "name": "Vegeta", "img": "https://i.ibb.co/4Zb5KwT/vegeta.png"},
-        {"id": "DB03", "name": "Gohan", "img": "https://i.ibb.co/FY4R6Vn/gohan.png"},
+        {"id": "DB01", "name": "Goku", "img": "https://i.imgur.com/OUq8H0z.png"},
+        {"id": "DB02", "name": "Vegeta", "img": "https://i.imgur.com/pzXy7eJ.png"},
+        {"id": "DB03", "name": "Gohan", "img": "https://i.imgur.com/43QqfT7.png"}
     ],
     "Naruto": [
-        {"id": "NA01", "name": "Naruto", "img": "https://i.ibb.co/vmckP6H/naruto.png"},
-        {"id": "NA02", "name": "Sasuke", "img": "https://i.ibb.co/2Mhb9Kb/sasuke.png"},
-        {"id": "NA03", "name": "Kakashi", "img": "https://i.ibb.co/DGpNGWb/kakashi.png"},
+        {"id": "NA01", "name": "Naruto", "img": "https://i.imgur.com/oF0y8fZ.png"},
+        {"id": "NA02", "name": "Sasuke", "img": "https://i.imgur.com/3P1DOrC.png"},
+        {"id": "NA03", "name": "Kakashi", "img": "https://i.imgur.com/sUQNdwR.png"}
     ],
     "One Piece": [
-        {"id": "OP01", "name": "Luffy", "img": "https://i.ibb.co/5McC4Gt/luffy.png"},
-        {"id": "OP02", "name": "Zoro", "img": "https://i.ibb.co/wdKCFbH/zoro.png"},
-        {"id": "OP03", "name": "Nami", "img": "https://i.ibb.co/VpdWJ7M/nami.png"},
+        {"id": "OP01", "name": "Luffy", "img": "https://i.imgur.com/hncvH5o.png"},
+        {"id": "OP02", "name": "Zoro", "img": "https://i.imgur.com/rV8pp3M.png"},
+        {"id": "OP03", "name": "Nami", "img": "https://i.imgur.com/7gQzZqv.png"}
+    ]
+
     ],
 }
 
