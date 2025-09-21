@@ -17,22 +17,22 @@ st.title("🛒 Chương trình quản lý cửa hàng đồ chơi")
 st.subheader("Chọn chủ đề mô hình:")
 option = st.radio("Chủ đề", ["Dragon Ball", "Naruto", "One Piece"])
 
-# --- Dữ liệu mô hình ---
+# --- Dữ liệu mô hình (dùng link imgbb) ---
 models = {
     "Dragon Ball": [
-        {"id": "DB01", "name": "Goku", "img": "https://w7.pngwing.com/pngs/46/38/png-transparent-goku-thumbnail.png"},
-        {"id": "DB02", "name": "Vegeta", "img": "https://w7.pngwing.com/pngs/92/90/png-transparent-dragon-ball-z-vegeta-goku-gohan-dragon-ball-z-goku-child-gohan-thumbnail.png"},
-        {"id": "DB03", "name": "Gohan", "img": "https://w7.pngwing.com/pngs/302/315/png-transparent-gohan-goku-vegeta-dragon-ball-dragon-ball-cartoon-thumbnail.png"}
+        {"id": "DB01", "name": "Goku", "img": "https://i.ibb.co/J3h7X7B/goku.png"},
+        {"id": "DB02", "name": "Vegeta", "img": "https://i.ibb.co/4Zb5KwT/vegeta.png"},
+        {"id": "DB03", "name": "Gohan", "img": "https://i.ibb.co/FY4R6Vn/gohan.png"}
     ],
     "Naruto": [
-        {"id": "NA01", "name": "Naruto", "img": "https://www.google.com/imgres?q=m%C3%B4%20h%C3%ACnh%20naruto&imgurl=https%3A%2F%2Fdinotoystore.vn%2Fwp-content%2Fuploads%2F2023%2F05%2F350636998_264683536102104_7120706964712928931_n.jpg&imgrefurl=https%3A%2F%2Fdinotoystore.vn%2Fsan-pham%2Fmo-hinh-naruto-hien-nhan-thuat-evil-studio%2F&docid=KzkM625TxjqOuM&tbnid=sA9rtVh5rBAu0M&vet=12ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBsQAA..i&w=790&h=526&hcb=2&ved=2ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBsQAA"},
-        {"id": "NA02", "name": "Sasuke", "img": "https://www.google.com/imgres?q=m%C3%B4%20h%C3%ACnh%20naruto&imgurl=https%3A%2F%2Fsneakerdaily.vn%2Fwp-content%2Fuploads%2F2024%2F03%2FMo-Hinh-Do-Choi-POP-MART-Naruto-Ninkai-Taisen-6941848247599-10.jpg&imgrefurl=https%3A%2F%2Fsneakerdaily.vn%2Fsan-pham%2Fmo-hinh-do-choi-pop-mart-naruto-ninkai-taisen-6941848247599%2F&docid=xiHLiMzoHaDd4M&tbnid=8ht3Y-L_SbAvNM&vet=12ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBwQAA..i&w=1200&h=1200&hcb=2&ved=2ahUKEwiT4_H3-OiPAxXni68BHXsjEnMQM3oECBwQAA"},
-        {"id": "NA03", "name": "Kakashi", "img": "https://w7.pngwing.com/pngs/620/978/png-transparent-kakashi-hatake-naruto-uzumaki-sasuke-uchiha-sakura-haruno-naruto-cartoon-comic-book-fictional-character-thumbnail.png"}
+        {"id": "NA01", "name": "Naruto", "img": "https://i.ibb.co/vmckP6H/naruto.png"},
+        {"id": "NA02", "name": "Sasuke", "img": "https://i.ibb.co/2Mhb9Kb/sasuke.png"},
+        {"id": "NA03", "name": "Kakashi", "img": "https://i.ibb.co/DGpNGWb/kakashi.png"}
     ],
     "One Piece": [
-        {"id": "OP01", "name": "Luffy", "img": "https://w7.pngwing.com/pngs/101/513/png-transparent-monkey-d-luffy-nami-roronoa-zoro-one-piece-pirate-warriors-3-luffy-png-material-computer-wallpaper-cartoon-thumbnail.png"},
-        {"id": "OP02", "name": "Zoro", "img": "https://w7.pngwing.com/pngs/731/431/png-transparent-roronoa-zoro-monkey-d-luffy-one-piece-world-seeker-one-piece-treasure-cruise-zoro-pirate-fictional-character-thumbnail.png"},
-        {"id": "OP03", "name": "Nami", "img": "https://w7.pngwing.com/pngs/644/518/png-transparent-nami-monkey-d-luffy-roronoa-zoro-one-piece-grand-battle-anime-fictional-character-cartoon-thumbnail.png"}
+        {"id": "OP01", "name": "Luffy", "img": "https://i.ibb.co/5McC4Gt/luffy.png"},
+        {"id": "OP02", "name": "Zoro", "img": "https://i.ibb.co/wdKCFbH/zoro.png"},
+        {"id": "OP03", "name": "Nami", "img": "https://i.ibb.co/VpdWJ7M/nami.png"}
     ]
 }
 
@@ -65,4 +65,5 @@ if submit:
         st.write("Cảm ơn bạn đã mua hàng 🛍️")
     else:
         st.error("⚠️ Vui lòng nhập đầy đủ thông tin trước khi xác nhận.")
+
 
