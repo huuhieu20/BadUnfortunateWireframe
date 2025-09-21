@@ -17,7 +17,7 @@ st.title("🛒 Chương trình quản lý cửa hàng đồ chơi")
 st.subheader("Chọn chủ đề mô hình:")
 option = st.radio("Chủ đề", ["Dragon Ball", "Naruto", "One Piece"])
 
-# --- Dữ liệu mô hình (dùng link imgbb) ---
+# --- Dữ liệu mô hình (PNG nền trong suốt, upload sẵn) ---
 models = {
     "Dragon Ball": [
         {"id": "DB01", "name": "Goku", "img": "https://i.ibb.co/J3h7X7B/goku.png"},
@@ -65,5 +65,6 @@ if submit:
         st.write("Cảm ơn bạn đã mua hàng 🛍️")
     else:
         st.error("⚠️ Vui lòng nhập đầy đủ thông tin trước khi xác nhận.")
+
 
 
