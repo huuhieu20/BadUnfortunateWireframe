@@ -1,22 +1,68 @@
 import streamlit as st
 
-st.title("📚 Quản lý Thời khóa biểu")
+# --- Sidebar ---
+st.sidebar.title("Cửa hàng mô hình Anime")
+st.sidebar.info(
+    """
+    📍 Địa chỉ: 123 Đường ABC, Hà Nội  
+    📞 SĐT: 0987 654 321  
+    📧 Email: shop@anime.vn
+    """
+)
 
-# Dữ liệu thời khóa biểu
-timetable = {
-    "Thứ Hai": ["Toán", "Ngữ văn", "Tiếng Anh", "Vật lý"],
-    "Thứ Ba": ["Hóa học", "Sinh học", "Lịch sử", "Địa lý"],
-    "Thứ Tư": ["Toán", "Tin học", "Ngữ văn", "Thể dục"],
-    "Thứ Năm": ["Tiếng Anh", "Vật lý", "Công nghệ", "GDCD"],
-    "Thứ Sáu": ["Toán", "Ngữ văn", "Hóa học", "Lịch sử"],
-    "Thứ Bảy": ["Sinh học", "Địa lý", "Tin học", "Thể dục"],
-    "Chủ Nhật": ["Nghỉ học 🎉"]
+# --- Tiêu đề chính ---
+st.title("🛒 Chương trình quản lý cửa hàng đồ chơi")
+
+# --- Các chủ đề ---
+st.subheader("Chọn chủ đề mô hình:")
+option = st.radio("Chủ đề", ["Dragon Ball", "Naruto", "One Piece"])
+
+# --- Dữ liệu mô hình ---
+models = {
+    "Dragon Ball": [
+        {"id": "DB01", "name": "Goku", "img": "https://i.ibb.co/J3h7X7B/goku.png"},
+        {"id": "DB02", "name": "Vegeta", "img": "https://i.ibb.co/4Zb5KwT/vegeta.png"},
+        {"id": "DB03", "name": "Gohan", "img": "https://i.ibb.co/FY4R6Vn/gohan.png"},
+    ],
+    "Naruto": [
+        {"id": "NA01", "name": "Naruto", "img": "https://i.ibb.co/vmckP6H/naruto.png"},
+        {"id": "NA02", "name": "Sasuke", "img": "https://i.ibb.co/2Mhb9Kb/sasuke.png"},
+        {"id": "NA03", "name": "Kakashi", "img": "https://i.ibb.co/DGpNGWb/kakashi.png"},
+    ],
+    "One Piece": [
+        {"id": "OP01", "name": "Luffy", "img": "https://i.ibb.co/5McC4Gt/luffy.png"},
+        {"id": "OP02", "name": "Zoro", "img": "https://i.ibb.co/wdKCFbH/zoro.png"},
+        {"id": "OP03", "name": "Nami", "img": "https://i.ibb.co/VpdWJ7M/nami.png"},
+    ],
 }
 
-# Selectbox chọn ngày
-day = st.selectbox("Chọn ngày trong tuần:", list(timetable.keys()))
+# --- Hiển thị danh sách mô hình ---
+st.subheader(f"Danh sách mô hình: {option}")
+cols = st.columns(3)
+for i, model in enumerate(models[option]):
+    with cols[i % 3]:
+        st.image(model["img"], caption=f"{model['name']} (Mã: {model['id']})", use_container_width=True)
 
-# Hiển thị môn học
-st.subheader(f"📅 Thời khóa biểu {day}:")
-for i, subject in enumerate(timetable[day], start=1):
-    st.write(f"{i}. {subject}")
+# --- Form đặt hàng ---
+st.subheader("📝 Đặt hàng")
+with st.form("order_form"):
+    model_id = st.text_input("Nhập mã mô hình")
+    quantity = st.number_input("Số lượng", min_value=1, value=1)
+    name = st.text_input("Họ và tên")
+    phone = st.text_input("Số điện thoại")
+    address = st.text_area("Địa chỉ giao hàng")
+    submit = st.form_submit_button("Xác nhận đặt hàng")
+
+if submit:
+    if model_id and name and phone and address:
+        st.success("✅ Đặt hàng thành công!")
+        st.write("### Hóa đơn")
+        st.write(f"- Mã mô hình: {model_id}")
+        st.write(f"- Số lượng: {quantity}")
+        st.write(f"- Khách hàng: {name}")
+        st.write(f"- SĐT: {phone}")
+        st.write(f"- Địa chỉ: {address}")
+        st.write("Cảm ơn bạn đã mua hàng 🛍️")
+    else:
+        st.error("⚠️ Vui lòng nhập đầy đủ thông tin trước khi xác nhận.")
+
