@@ -34,8 +34,6 @@ models = {
         {"id": "OP02", "name": "Zoro", "img": "https://i.imgur.com/rV8pp3M.png"},
         {"id": "OP03", "name": "Nami", "img": "https://i.imgur.com/7gQzZqv.png"}
     ]
-
-    ],
 }
 
 # --- Hiển thị danh sách mô hình ---
@@ -67,4 +65,3 @@ if submit:
         st.write("Cảm ơn bạn đã mua hàng 🛍️")
     else:
         st.error("⚠️ Vui lòng nhập đầy đủ thông tin trước khi xác nhận.")
-
